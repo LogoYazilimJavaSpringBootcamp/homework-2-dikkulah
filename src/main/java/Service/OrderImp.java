@@ -2,7 +2,7 @@ package Service;
 
 import Model.Customer;
 import Model.Order;
-import Model.Product.IProduct;
+import Model.ProductFactory.IProduct;
 
 import java.util.*;
 import java.util.stream.Collectors;

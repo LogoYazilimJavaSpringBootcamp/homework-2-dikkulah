@@ -1,22 +1,25 @@
-package Model.Product;
+package Model.ProductFactory;
 
 import Model.Identifier;
 
-public class Electonic extends Identifier implements IProduct {
+public class Meat extends Identifier implements IProduct {
     private String name;
     private Double price;
     private String info = "Bilgi yok.";
 
-    public Electonic(String name, double price) {
+
+    public Meat(String name, double price) {
         this.name = name;
         this.price = price;
     }
 
-    public Electonic(String name, double price, String info) {
+    public Meat(String name, double price, String info) {
         this.name = name;
         this.price = price;
         this.info = info;
     }
+
+
 
     @Override
     public String getName() {
@@ -47,13 +50,12 @@ public class Electonic extends Identifier implements IProduct {
     public void setInfo(String info) {
         this.info = info;
     }
-
     @Override
     public String toString() {
-        return "Electonic{" +
+        return "Meat{" +
                 name + ' ' +
-                price + ' ' +
-                info +
+                price + ' '+
+                info + ' ' +
                 '}';
     }
 }

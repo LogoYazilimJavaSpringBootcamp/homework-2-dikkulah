@@ -1,21 +1,18 @@
-package Model.Product;
-
+package Model.ProductFactory;
 
 import Model.Identifier;
 
-public class Fruit extends Identifier implements IProduct {
-
+public class Electonic extends Identifier implements IProduct {
     private String name;
     private Double price;
-    private String info="Bilgi yok.";
+    private String info = "Bilgi yok.";
 
-
-
-    public Fruit(String name, double price) {
+    public Electonic(String name, double price) {
         this.name = name;
         this.price = price;
     }
-    public Fruit(String name, double price, String info) {
+
+    public Electonic(String name, double price, String info) {
         this.name = name;
         this.price = price;
         this.info = info;
@@ -51,13 +48,12 @@ public class Fruit extends Identifier implements IProduct {
         this.info = info;
     }
 
-
     @Override
     public String toString() {
-        return "Fruit{" +
+        return "Electonic{" +
                 name + ' ' +
-                price + ' '+
-                info + ' ' +
+                price + ' ' +
+                info +
                 '}';
     }
 }

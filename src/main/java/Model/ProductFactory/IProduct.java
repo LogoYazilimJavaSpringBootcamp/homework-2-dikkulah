@@ -1,4 +1,4 @@
-package Model.Product;
+package Model.ProductFactory;
 
 
 public  interface IProduct {

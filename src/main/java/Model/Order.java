@@ -1,6 +1,6 @@
 package Model;
 
-import Model.Product.IProduct;
+import Model.ProductFactory.IProduct;
 import lombok.Getter;
 import lombok.Setter;
 

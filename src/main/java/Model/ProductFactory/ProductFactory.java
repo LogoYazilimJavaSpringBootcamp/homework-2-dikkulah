@@ -1,4 +1,4 @@
-package Model.Product;
+package Model.ProductFactory;
 
 public class ProductFactory implements IProductFactory {
 

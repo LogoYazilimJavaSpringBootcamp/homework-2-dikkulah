@@ -1,7 +1,7 @@
 import Model.*;
-import Model.Product.IProduct;
-import Model.Product.ProductFactory;
-import Model.Product.ProductType;
+import Model.ProductFactory.IProduct;
+import Model.ProductFactory.ProductFactory;
+import Model.ProductFactory.ProductType;
 import Service.CustomerImp;
 import Service.CustomerService;
 import Service.OrderImp;
@@ -79,7 +79,7 @@ public class Main {
         System.out.println();
         customerService.printAll(); //Tüm müşterileri listeleme
         System.out.println();
-        orderService.printOrdersByCustomer(ufuk);
+        orderService.printOrdersByCustomer(ufuk); // müşterinin faturaları
         System.out.println();
         customerService.findByContainsLetter("C"); // C içeren müşterileri listeleme
         System.out.println();
@@ -89,8 +89,9 @@ public class Main {
         System.out.println();
         orderService.findLowerThenX(500.0); // 500 den küçük faturalar
         System.out.println();
-        customerService.getSectorFromFiltered(750.0,"Jun");
+        customerService.getSectorFromFiltered(750.0,"Jun"); //x ayı faturaları ortalaması x ten küçük olanların sectörleri
         System.out.println();
+        orderService.findSumOrderByJoinDate("Jun"); // x ayında kayıt olanların fatura toplamı
 
     }
 }

@@ -9,5 +9,5 @@ public interface CustomerService {
 
     void printAll(); // Tüm müşterileri yazdırma
 
-    void getSectorFromFiltered(Double value, String month);  // x ayındaki siparişleri ortalaması x değerinden küçük olanları yazdırma
+    void getSectorFromFiltered(Double price, String month);  // x ayındaki siparişleri ortalaması x değerinden küçük olanları yazdırma
 }
