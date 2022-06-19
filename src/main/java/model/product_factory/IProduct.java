@@ -1,4 +1,4 @@
-package Model.ProductFactory;
+package model.product_factory;
 
 
 public  interface IProduct {

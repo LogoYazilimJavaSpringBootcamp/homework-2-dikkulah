@@ -27,7 +27,7 @@
     - `Veri Katmanı:`
       - Veri tabanı ile iletişimimizi sağlar.
       - Verilerin uygulama Katmanına geri döndürür.
-  - <img src="img/n-tier.png" width="600" height="400" alt="N-tier ">
+  - <img src="img/n-tier.png"  alt="N-tier">
 
 
 3. `Garbage collector nedir, nasıl çalışır? Diğer C++ ile karşılaştırın. (10 Puan)`
@@ -38,10 +38,10 @@
    - Otomatik bir işlemdir ve JVM de sürekli olarak çalışır.
    - `Person onbject = new Person("Ufuk);` java nesne yi oluşturu ve ona bir referans atar
    - `object =null;` atarsak işarekçi geçersiz olur. Bir nesnein yığın belleğinde referansı yok ise çöp toplamaya uygun
-   - 
+   - a
    - Heap hafıza alanı içerisinde Jvm ve Gc nin ççalıştığı alanalr aşağıdaki gibidir.
-     - <img src="img/GC.png" width="600" height="400" alt="N-tier ">
-   - 
+   - <img src="img/GC.png"  alt="GC">
+   - b
 
 4. `Spring frameworkünün kullandığı design patternlar neler? (10 Puan)`
 
@@ -49,9 +49,19 @@
 5. `Creational Patterns neler? Önceki ödevde oluşturulan nesnelerinizi factory Design
    patterni ile oluşacak şekilde düzenleyin. (25 Puan)`
 
-   - Product classı IProduct interfacesine dönüştü.
-   - Daha fazla örnek için Electronic classı eklendi.
-   - 
-
+    - Product -> IProduct interface -> Fruit, Electronic,Meat.
+    - Customer -> IPersonality inteface-> Indivudial ve Corporate.
+    - <img src="src/main/java/model/personality_factory/PersonalityFactory.png"   alt="personality">
+    - <img src="src/main/java/model/product_factory/ProductFactory.png"  alt="product">
+    
 
 6. `Singleton ve AbstractFactory patterlerini implemente eden kodu yazın.(25 Puan)`
+    - AbstractFactory - Company
+    - Factory - Vestel, Beko
+    - Interface - TV, Freezer
+    - Product - VestelTV, VestelFreezer, BekoTV, BekoFreezer
+    - <img src="src/main/java/abstract_factory/AbstractFactory.png"  alt="AbstractFactory">
+    
+    - 
+
+

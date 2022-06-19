@@ -1,6 +1,6 @@
-package Model.ProductFactory;
+package model.product_factory;
 
-import Model.Identifier;
+import model.Identifier;
 
 public class Electonic extends Identifier implements IProduct {
     private String name;

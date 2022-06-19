@@ -1,8 +1,7 @@
-package Model;
+package model;
 
 import lombok.Getter;
 
-import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 

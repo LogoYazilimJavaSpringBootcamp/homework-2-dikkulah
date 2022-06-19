@@ -1,10 +1,9 @@
-package Model;
+package model;
 
-import Model.PersonalityFactory.IPersonality;
-import Model.PersonalityFactory.Indivudial;
-import Model.ProductFactory.IProduct;
 import lombok.Getter;
 import lombok.Setter;
+import model.personality_factory.IPersonality;
+import model.product_factory.IProduct;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -14,24 +13,24 @@ import java.util.List;
 @Getter
 public class Order extends Identifier {
 
-    private final static List<Order> allOrders = new ArrayList<>(); // kayıt görevi görüyor
+    private static final List<Order> allOrders = new ArrayList<>(); // kayıt görevi görüyor
     private IPersonality iPersonality;
-    private List<IProduct> IProducts;
+    private List<IProduct> iProducts;
     private Double totalPrice;
     private Date orderDate;
 
-    public Order(IPersonality iPersonality, List<IProduct> IProducts) {
+    public Order(IPersonality iPersonality, List<IProduct> iProducts) {
         this.iPersonality = iPersonality;
-        this.IProducts = IProducts;
+        this.iProducts = iProducts;
         this.orderDate = new Date();
-        this.totalPrice = calcPrice(IProducts);
+        this.totalPrice = calcPrice(iProducts);
 
     }
 
-    public Order(IPersonality iPersonality, List<IProduct> IProducts, Date orderDate) {
+    public Order(IPersonality iPersonality, List<IProduct> iProducts, Date orderDate) {
         this.iPersonality = iPersonality;
-        this.IProducts = IProducts;
-        this.totalPrice = calcPrice(IProducts);
+        this.iProducts = iProducts;
+        this.totalPrice = calcPrice(iProducts);
         this.orderDate = orderDate;
     }
 
@@ -39,8 +38,8 @@ public class Order extends Identifier {
         return allOrders;
     }
 
-    private static Double calcPrice(List<IProduct> IProductList) {
-        var price = IProductList.stream().map(IProduct::getPrice).toList();
+    private static Double calcPrice(List<IProduct> iProducts) {
+        var price = iProducts.stream().map(IProduct::getPrice).toList();
         double sum = 0;
         for (Double value : price) {
             sum += value;
@@ -53,7 +52,7 @@ public class Order extends Identifier {
     public String toString() {
         return "OrderId:" + super.toString() +
                 " | " + iPersonality.toStringFullName() +
-                " | " + IProducts.toString() +
+                " | " + iProducts.toString() +
                 " | " + totalPrice + "₺ ";
     }
 

@@ -1,9 +1,8 @@
-package Model.PersonalityFactory;
+package model.personality_factory;
 
 
-import Model.Order;
+import model.Order;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.List;
 

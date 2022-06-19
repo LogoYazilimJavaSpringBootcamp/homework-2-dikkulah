@@ -1,6 +1,6 @@
-package Service;
+package service;
 
-import Model.PersonalityFactory.IPersonality;
+import model.personality_factory.IPersonality;
 
 public interface PersonalityService {
     void save(IPersonality iPersonality); // Kullanıcı kaydetme

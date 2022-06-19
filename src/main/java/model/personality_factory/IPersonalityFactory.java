@@ -1,4 +1,4 @@
-package Model.PersonalityFactory;
+package model.personality_factory;
 
 
 import java.util.Date;

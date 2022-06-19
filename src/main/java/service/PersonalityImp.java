@@ -1,7 +1,7 @@
-package Service;
+package service;
 
-import Model.PersonalityFactory.IPersonality;
-import Model.Order;
+import model.personality_factory.IPersonality;
+import model.Order;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,12 +47,10 @@ public class PersonalityImp implements PersonalityService {
         System.out.println("----- "+month+" ayındaki faturalarının ortalamaları "+ price+ "₺ dan küçük olanları sektörleri---");
         for (IPersonality iPersonality :ALL_PERSONALITY) {
 
-                if (!(iPersonality.getOrders().size() ==0)) {
-                    if (iPersonality.getOrders().stream().filter(order -> order.getOrderDate().toString().contains(month))
-                            .mapToDouble(Order::getTotalPrice).average().orElseThrow() < price) {
-                        System.out.println(" " + iPersonality.getSector());
-                    }
-                }
+            if (iPersonality.getOrders().size() != 0 && iPersonality.getOrders().stream().filter(order -> order.getOrderDate().toString().contains(month))
+                    .mapToDouble(Order::getTotalPrice).average().orElseThrow() < price) {
+                System.out.println(" " + iPersonality.getSector());
+            }
 
         }
 

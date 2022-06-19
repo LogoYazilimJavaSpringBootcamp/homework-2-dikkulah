@@ -1,14 +1,14 @@
-import Model.Order;
-import Model.PersonalityFactory.IPersonality;
-import Model.PersonalityFactory.PersonalityFactory;
-import Model.PersonalityFactory.PersonalityType;
-import Model.ProductFactory.IProduct;
-import Model.ProductFactory.ProductFactory;
-import Model.ProductFactory.ProductType;
-import Service.PersonalityImp;
-import Service.PersonalityService;
-import Service.OrderImp;
-import Service.OrderService;
+import model.Order;
+import model.personality_factory.IPersonality;
+import model.personality_factory.PersonalityFactory;
+import model.personality_factory.PersonalityType;
+import model.product_factory.IProduct;
+import model.product_factory.ProductFactory;
+import model.product_factory.ProductType;
+import service.PersonalityImp;
+import service.PersonalityService;
+import service.OrderImp;
+import service.OrderService;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,43 +21,43 @@ public class Main {
 
     public static void main(String[] args) {
         ProductFactory productFactory = new ProductFactory();
-        IProduct elma = productFactory.ProduceProduct(ProductType.Fruit, "Elma", 50.);
-        IProduct karpuz = productFactory.ProduceProduct(ProductType.Fruit, "Karpuz", 50.);
-        IProduct telefon = productFactory.ProduceProduct(ProductType.Electronic, "Telefon", 1000.0);
-        IProduct et = productFactory.ProduceProduct(ProductType.Meat, "Dana Kıyma", 150.0);
+        IProduct elma = productFactory.produceProduct(ProductType.FRUIT, "Elma", 50.);
+        IProduct karpuz = productFactory.produceProduct(ProductType.FRUIT, "Karpuz", 50.);
+        IProduct telefon = productFactory.produceProduct(ProductType.ELECTRONIC, "Telefon", 1000.0);
+        IProduct et = productFactory.produceProduct(ProductType.MEAT, "Dana Kıyma", 150.0);
 
         PersonalityFactory personalityFactory = new PersonalityFactory();
-        IPersonality ufuk = personalityFactory.producePersonality(PersonalityType.Indivudial, "Ufuk", "Dikkülah", "Yazılım");
-        IPersonality ahmet = personalityFactory.producePersonality(PersonalityType.Indivudial, "Ahmet", "Yılmaz", "Yazılım");
-        IPersonality tugce = personalityFactory.producePersonality(PersonalityType.Indivudial, "Tuğçe", "Eren", "Turizm");
-        IPersonality zeynep = personalityFactory.producePersonality(PersonalityType.Indivudial, "Zeynep", "Kıran", "Turizm");
-        IPersonality ceyhun = personalityFactory.producePersonality(PersonalityType.Indivudial, "Ceyhun", "Melek", "Emlak");
-        IPersonality logo = personalityFactory.producePersonality(PersonalityType.Corporate,"Logo",null,"Yazılım");
+        IPersonality ufuk = personalityFactory.producePersonality(PersonalityType.INDIVUDIAL, "Ufuk", "Dikkülah", "Yazılım");
+        IPersonality ahmet = personalityFactory.producePersonality(PersonalityType.INDIVUDIAL, "Ahmet", "Yılmaz", "Yazılım");
+        IPersonality tugce = personalityFactory.producePersonality(PersonalityType.INDIVUDIAL, "Tuğçe", "Eren", "Turizm");
+        IPersonality zeynep = personalityFactory.producePersonality(PersonalityType.INDIVUDIAL, "Zeynep", "Kıran", "Turizm");
+        IPersonality ceyhun = personalityFactory.producePersonality(PersonalityType.INDIVUDIAL, "Ceyhun", "Melek", "Emlak");
+        IPersonality logo = personalityFactory.producePersonality(PersonalityType.CORPORATE,"Logo",null,"Yazılım");
 
-        List<IProduct> IProductList = new ArrayList<>(5);
-        List<IProduct> IProductList1 = new ArrayList<>(5);
-        List<IProduct> IProductList3 = new ArrayList<>(5);
-        List<IProduct> IProductList2 = new ArrayList<>(5);
+        List<IProduct> iProductList = new ArrayList<>(5);
+        List<IProduct> iProductList1 = new ArrayList<>(5);
+        List<IProduct> iProductList3 = new ArrayList<>(5);
+        List<IProduct> iProductList2 = new ArrayList<>(5);
 
-        IProductList3.add(karpuz);
-        IProductList3.add(elma);
-        IProductList3.add(et);
+        iProductList3.add(karpuz);
+        iProductList3.add(elma);
+        iProductList3.add(et);
 
-        IProductList2.add(karpuz);
-        IProductList2.add(karpuz);
-        IProductList2.add(et);
-        IProductList2.add(et);
-        IProductList2.add(et);
-        IProductList2.add(et);
-        IProductList2.add(et);
+        iProductList2.add(karpuz);
+        iProductList2.add(karpuz);
+        iProductList2.add(et);
+        iProductList2.add(et);
+        iProductList2.add(et);
+        iProductList2.add(et);
+        iProductList2.add(et);
 
-        IProductList.add(telefon);
-        IProductList.add(telefon);
-        IProductList.add(karpuz);
-        IProductList.add(karpuz);
+        iProductList.add(telefon);
+        iProductList.add(telefon);
+        iProductList.add(karpuz);
+        iProductList.add(karpuz);
 
-        IProductList1.add(telefon);
-        IProductList1.add(telefon);
+        iProductList1.add(telefon);
+        iProductList1.add(telefon);
 
         personalityService.save(logo);
         personalityService.save(ufuk);
@@ -65,12 +65,12 @@ public class Main {
         personalityService.save(tugce);
         personalityService.save(ceyhun);
         personalityService.save(zeynep); // Yeni Müşteri kayıt
-        Order order6 = new Order(ceyhun, IProductList3, new Date());
-        Order order1 = new Order(ufuk, IProductList);
-        Order order4 = new Order(ufuk, IProductList1);
-        Order order2 = new Order(tugce, IProductList3);
-        Order order3 = new Order(ceyhun, IProductList3);
-        Order order5 = new Order(tugce, IProductList2);
+        Order order6 = new Order(ceyhun, iProductList3, new Date());
+        Order order1 = new Order(ufuk, iProductList);
+        Order order4 = new Order(ufuk, iProductList1);
+        Order order2 = new Order(tugce, iProductList3);
+        Order order3 = new Order(ceyhun, iProductList3);
+        Order order5 = new Order(tugce, iProductList2);
 
         orderService.save(tugce, order5);
         orderService.save(ufuk, order4);

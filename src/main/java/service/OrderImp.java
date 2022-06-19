@@ -1,9 +1,8 @@
-package Service;
+package service;
 
-import Model.PersonalityFactory.IPersonality;
-import Model.PersonalityFactory.Indivudial;
-import Model.Order;
-import Model.ProductFactory.IProduct;
+import model.Order;
+import model.personality_factory.IPersonality;
+import model.product_factory.IProduct;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -30,8 +29,6 @@ public class OrderImp implements OrderService {
     @Override
     public void printOrdersByCustomer(IPersonality iPersonality) {
         System.out.println("|-------" + iPersonality.toStringFullName() + " ın faturaları : --------------]");
-        // Map kullanmak için silindi
-        //indivudial.getOrders().stream().map(order -> order.getId() + " " + order.getIProducts().toString() + " " + order.getTotalPrice() + "₺").forEach(System.out::println);
 
         Map<String,List<IProduct>> a= Order.getAllOrders().stream().filter(order -> order.getIPersonality() == iPersonality).collect(Collectors.toMap(Order::getId, Order::getIProducts));
 

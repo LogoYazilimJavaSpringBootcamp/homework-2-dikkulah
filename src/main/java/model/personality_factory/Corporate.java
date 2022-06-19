@@ -1,9 +1,7 @@
-package Model.PersonalityFactory;
+package model.personality_factory;
 
-import Model.Identifier;
-import Model.Order;
-import lombok.Getter;
-import lombok.Setter;
+import model.Identifier;
+import model.Order;
 
 import java.util.ArrayList;
 import java.util.Date;

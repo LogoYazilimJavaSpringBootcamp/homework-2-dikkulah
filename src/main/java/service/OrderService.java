@@ -1,8 +1,7 @@
-package Service;
+package service;
 
-import Model.PersonalityFactory.IPersonality;
-import Model.PersonalityFactory.Indivudial;
-import Model.Order;
+import model.personality_factory.IPersonality;
+import model.Order;
 
 public interface OrderService {
 
