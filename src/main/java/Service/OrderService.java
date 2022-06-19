@@ -1,15 +1,16 @@
 package Service;
 
-import Model.Customer;
+import Model.PersonalityFactory.IPersonality;
+import Model.PersonalityFactory.Indivudial;
 import Model.Order;
 
 public interface OrderService {
 
-    void save(Customer customer, Order order); //fatura kaydetme
+    void save(IPersonality iPersonality, Order order); //fatura kaydetme
 
     void printAll();// sistemdeki tüm faturaları listeleme
 
-    void printOrdersByCustomer(Customer customer); // müşterinin faturalarını listele
+    void printOrdersByCustomer(IPersonality iPersonality); // müşterinin faturalarını listele
 
     void findSumOrderByJoinDate(String month); // X ayında kayıt olanların fatura toplam tutarı
 

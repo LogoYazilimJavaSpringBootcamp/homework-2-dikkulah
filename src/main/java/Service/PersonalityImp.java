@@ -1,27 +1,28 @@
 package Service;
 
-import Model.Customer;
+import Model.PersonalityFactory.IPersonality;
 import Model.Order;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CustomerImp implements CustomerService {
+public class PersonalityImp implements PersonalityService {
 
 
+    private static final List<IPersonality> ALL_PERSONALITY = new ArrayList<>(); // kayıt görevi görüyor
 
     @Override
-    public void save(Customer customer) {
+    public void save(IPersonality iPersonality) {
 
-        System.out.println(customer.toStringFullName() + " müşterisi kaydedildi.");
-        Customer.getAllCustomers().add(customer);
+        System.out.println(iPersonality.toStringFullName() + " kaydedildi.");
+        ALL_PERSONALITY.add(iPersonality);
     }
 
     @Override
     public void findByContainsLetter(String letter) {
         System.out.println("|----------  " + letter + " Harfini içerenler----|");
-        Customer.getAllCustomers().stream()
-                .map(Customer::toString)
+        ALL_PERSONALITY.stream()
+                .map(IPersonality::toString)
                 .filter(s -> (s.contains(letter.toLowerCase()) || s.contains(letter.toUpperCase())))
                 .forEach(System.out::println);
     }
@@ -30,7 +31,7 @@ public class CustomerImp implements CustomerService {
     @Override
     public void printAll() {
         System.out.println("|-------------------------------Tüm Müşteriler-------------------------------| ");
-        Customer.getAllCustomers().stream().map(Customer::toString).forEach(System.out::println);
+        ALL_PERSONALITY.stream().map(IPersonality::toString).forEach(System.out::println);
 
 
     }
@@ -44,12 +45,12 @@ public class CustomerImp implements CustomerService {
     @Override
     public  void getSectorFromFiltered(Double price, String month) {
         System.out.println("----- "+month+" ayındaki faturalarının ortalamaları "+ price+ "₺ dan küçük olanları sektörleri---");
-        for (Customer customer : Customer.getAllCustomers()) {
+        for (IPersonality iPersonality :ALL_PERSONALITY) {
 
-                if (!(customer.getOrders().size() ==0)) {
-                    if (customer.getOrders().stream().filter(order -> order.getOrderDate().toString().contains(month))
+                if (!(iPersonality.getOrders().size() ==0)) {
+                    if (iPersonality.getOrders().stream().filter(order -> order.getOrderDate().toString().contains(month))
                             .mapToDouble(Order::getTotalPrice).average().orElseThrow() < price) {
-                        System.out.println(" " + customer.getSector());
+                        System.out.println(" " + iPersonality.getSector());
                     }
                 }
 

@@ -1,9 +1,9 @@
 package Service;
 
-import Model.Customer;
+import Model.PersonalityFactory.IPersonality;
 
-public interface CustomerService {
-    void save(Customer customer); // Kullanıcı kaydetme
+public interface PersonalityService {
+    void save(IPersonality iPersonality); // Kullanıcı kaydetme
 
     void findByContainsLetter(String letter); // Adında c harfini ierinler
 

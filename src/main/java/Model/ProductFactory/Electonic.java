@@ -5,11 +5,12 @@ import Model.Identifier;
 public class Electonic extends Identifier implements IProduct {
     private String name;
     private Double price;
-    private String info = "Bilgi yok.";
+    private String info ;
 
     public Electonic(String name, double price) {
         this.name = name;
         this.price = price;
+        this.info = "Bilgi yok.";
     }
 
     public Electonic(String name, double price, String info) {

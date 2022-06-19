@@ -7,13 +7,15 @@ public class Fruit extends Identifier implements IProduct {
 
     private String name;
     private Double price;
-    private String info="Bilgi yok.";
+    private String info;
 
 
 
     public Fruit(String name, double price) {
         this.name = name;
         this.price = price;
+        this.info = "Bilgi yok.";
+
     }
     public Fruit(String name, double price, String info) {
         this.name = name;

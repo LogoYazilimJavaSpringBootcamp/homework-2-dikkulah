@@ -1,5 +1,7 @@
 package Model;
 
+import Model.PersonalityFactory.IPersonality;
+import Model.PersonalityFactory.Indivudial;
 import Model.ProductFactory.IProduct;
 import lombok.Getter;
 import lombok.Setter;
@@ -13,21 +15,21 @@ import java.util.List;
 public class Order extends Identifier {
 
     private final static List<Order> allOrders = new ArrayList<>(); // kayıt görevi görüyor
-    private Customer customer;
+    private IPersonality iPersonality;
     private List<IProduct> IProducts;
     private Double totalPrice;
     private Date orderDate;
 
-    public Order(Customer customer, List<IProduct> IProducts) {
-        this.customer = customer;
+    public Order(IPersonality iPersonality, List<IProduct> IProducts) {
+        this.iPersonality = iPersonality;
         this.IProducts = IProducts;
         this.orderDate = new Date();
         this.totalPrice = calcPrice(IProducts);
 
     }
 
-    public Order(Customer customer, List<IProduct> IProducts, Date orderDate) {
-        this.customer = customer;
+    public Order(IPersonality iPersonality, List<IProduct> IProducts, Date orderDate) {
+        this.iPersonality = iPersonality;
         this.IProducts = IProducts;
         this.totalPrice = calcPrice(IProducts);
         this.orderDate = orderDate;
@@ -50,7 +52,7 @@ public class Order extends Identifier {
     @Override
     public String toString() {
         return "OrderId:" + super.toString() +
-                " | " + customer.toStringFullName() +
+                " | " + iPersonality.toStringFullName() +
                 " | " + IProducts.toString() +
                 " | " + totalPrice + "₺ ";
     }
