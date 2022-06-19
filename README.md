@@ -48,7 +48,19 @@
 
 5. `Creational Patterns neler? Önceki ödevde oluşturulan nesnelerinizi factory Design
    patterni ile oluşacak şekilde düzenleyin. (25 Puan)`
+    - `Factory Method Pattern:`
+      - Factory Method deseni, yazılım ortamında birden çok aynı özelliği gösterebilecek sınıflar için gerekli nesne üretiminin kalıtım yolu ile kalıtım yapılan nesne tarafından yapılmasını sağlamaktır.
+    - `Abstract Factory Pattern:`
+      - Abstract Factory deseni, aynı anda birden çok nesne ile birlikte işlem yapmak istediğimiz durumlarda kullanabileceğimiz bir tasarım desenidir.
+    - `Builder Pattern:`
+      - Builder deseni, bir nesneyi nesne tipi belirterek oluşturma işlemini yapan tasarım desenidir.
+    - `Prototype Pattern:`
+      - Sınıflardan nesneler yaratmak için constructorları kullanırız. Sınıfımızdaki field sayısı fazla olursa bu durumu çok karışık bir hale getirir. Her yeni field da yeni bir constructor eklememiz gerekir. Bu durumu aşmak için builder patterni kullanırız.
+    - `Singleton Pattern:`
+      - Singleton deseni, bir nesnenin bir defa oluşturularak her yerde kullanılmasını amaçlamaktadır. Böylece nesne birden fazla oluşturulmaz ve bellekte çok yer kaplayarak belleği gereksiz yere meşgul etmemektedir. Örneğin; bir projede veri tabanı bağlantı nesnesini bu yöntem ile yazabiliriz. 
 
+    - "---------------------"
+  
     - Product -> IProduct interface -> Fruit, Electronic,Meat.
     - Customer -> IPersonality inteface-> Indivudial ve Corporate.
     - <img src="src/main/java/model/personality_factory/PersonalityFactory.png"   alt="personality">
@@ -62,6 +74,7 @@
     - Product - VestelTV, VestelFreezer, BekoTV, BekoFreezer
     - <img src="src/main/java/abstract_factory/AbstractFactory.png"  alt="AbstractFactory">
     
-    - 
+    - Singleton Eager lazy ve enum 
+    - <img src="src/main/java/singleton/singleton.png"  alt="singleton">
 
 
