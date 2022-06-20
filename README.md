@@ -23,15 +23,15 @@
       - Struts, iyi tasarım uygulamalarını ve modellemeyi teşvik eder, çünkü çerçeve "zamanla kanıtlanmış" tasarım kalıplarıyla tasarlanır.
       - Struts neredeyse basittir, öğrenmesi ve kullanması çok kolaydır.
       - Giriş doğrulama ve uluslararasılaştırma gibi birçok kullanışlı özelliği destekler.
-      - `Hibernate: `
-        - Hibernate, veritabanı ile etkileşim kurmak için Java uygulama geliştirmelerini kolaylaştıran bir Java Frameworku’dur.
-        - Bir ORM(Object relational mapping) aracıdır, verioluşturma, değiştirme ve erişimini basitleştir.
-        - Veri tabanı bağımsız sorgu
-        - Otomatik tablo oluşturma gibi özellikleri vardır.
-      - `Vert.x:`
-        - Açık kaynaklı, reaktif ve çok dilli bir yazılım geliştirme araç takımıdır .
-        - Reaktif programlama, herhangi bir değişikliğe veya olaya yanıt veren asenkron akışlarla ilişkili bir programlama paradigmasıdır.
-        - Benzer şekilde, Vert.x uygulamanın farklı bölümleriyle iletişim kurmak için bir olay veriyolu kullanır ve uygun olduklarında işleyicilere eşzamansız olarak olayları iletir.
+   - `Hibernate: `
+     - Hibernate, veritabanı ile etkileşim kurmak için Java uygulama geliştirmelerini kolaylaştıran bir Java Frameworku’dur.
+     - Bir ORM(Object relational mapping) aracıdır, verioluşturma, değiştirme ve erişimini basitleştir.
+     - Veri tabanı bağımsız sorgu
+     - Otomatik tablo oluşturma gibi özellikleri vardır.
+   - `Vert.x:`
+     - Açık kaynaklı, reaktif ve çok dilli bir yazılım geliştirme araç takımıdır .
+     - Reaktif programlama, herhangi bir değişikliğe veya olaya yanıt veren asenkron akışlarla ilişkili bir programlama paradigmasıdır.
+     - Benzer şekilde, Vert.x uygulamanın farklı bölümleriyle iletişim kurmak için bir olay veriyolu kullanır ve uygun olduklarında işleyicilere eşzamansız olarak olayları iletir.
 2. `Katmanlı mimari nedir? (10 Puan)`
 
 - Bir proje geliştirirken kodu farklı katmanlara bölmek ve her katmanı birbirinden bağımsız olarak
