@@ -2,8 +2,36 @@
 
 1. `Java dünyasındaki framework’ler ve çözdükleri problemler nedir?(Spring MVC, JSP,
    Struct, Vaadin). Örnekler ile açıklayın. (20 Puan)`
-
-
+    - `Vaadin:` 
+      - GWT üzerine kurulmuş server-side web programlama framework'üdür.
+      - İş uygulamaları için web kullanıcı arayüzlerini hızlı bir şekilde geliştirmek için tasarlanmıştır.
+      - Sadelik ve sürdürülebilirliği hedefler, bakımı kolay, yeniden kullanılabilir bileşenler oluşturmayı kolaylaştırır.
+      - Vaadin ile hiç Javascript kodu yazmadan sadece java kodu yaazarak zengin içerikli ve etkileşimli web uygulamaları yazmak mümkündür.
+    - `JSP (JavaServer Pages):`
+      - Web uygulamalarımız için dinamik, veriye dayalı sayfalar yazmamıza olanak tanıyan bir java teknolojisidir.
+      - Ayrıca JSP, MVC wev uygulamaları oluşrutmak için JSF(JavaServer Faces) ile yakından alakalıdır.
+      - JSP platform bağımsızdır ve Html içinde özel tagler kullnılarak yazılır.
+      - Uygulama sunucusunda çalışır.
+    - `Spring MVC:`
+      - Spring Framework’ün web tabanlı uygulama geliştirme modülüdür.MVC mimarisi kullanarak aktif bir şekilde uygulama geliştirmeyi sağlar.
+      - Model- View- Controller mimarisi ile çalışır.
+      - Model : Mimarinin veri katmanıdır veritabanı sınıfları burada tutulur.
+      - View : Uygulamanın kullanıcı ile etkileşimde olan dosyalarının bulunduğu katmandır.
+      - Controller : Model ile View arasında köprü işlemi görür.Kullanıcıdan alınan verileri model’e aktarmakta kullanılır.
+    - `Struts:`
+      - MVC tabanlı java web uygulamalrı geliştirmede bir standart belirlemek amacıyla tasarlandı.
+      - Struts, iyi tasarım uygulamalarını ve modellemeyi teşvik eder, çünkü çerçeve "zamanla kanıtlanmış" tasarım kalıplarıyla tasarlanır.
+      - Struts neredeyse basittir, öğrenmesi ve kullanması çok kolaydır.
+      - Giriş doğrulama ve uluslararasılaştırma gibi birçok kullanışlı özelliği destekler.
+      - `Hibernate: `
+        - Hibernate, veritabanı ile etkileşim kurmak için Java uygulama geliştirmelerini kolaylaştıran bir Java Frameworku’dur.
+        - Bir ORM(Object relational mapping) aracıdır, verioluşturma, değiştirme ve erişimini basitleştir.
+        - Veri tabanı bağımsız sorgu
+        - Otomatik tablo oluşturma gibi özellikleri vardır.
+      - `Vert.x:`
+        - Açık kaynaklı, reaktif ve çok dilli bir yazılım geliştirme araç takımıdır .
+        - Reaktif programlama, herhangi bir değişikliğe veya olaya yanıt veren asenkron akışlarla ilişkili bir programlama paradigmasıdır.
+        - Benzer şekilde, Vert.x uygulamanın farklı bölümleriyle iletişim kurmak için bir olay veriyolu kullanır ve uygun olduklarında işleyicilere eşzamansız olarak olayları iletir.
 2. `Katmanlı mimari nedir? (10 Puan)`
 
 - Bir proje geliştirirken kodu farklı katmanlara bölmek ve her katmanı birbirinden bağımsız olarak
@@ -86,7 +114,7 @@
       - Singleton deseni, bir nesnenin bir defa oluşturularak her yerde kullanılmasını amaçlamaktadır. Böylece nesne birden fazla oluşturulmaz ve bellekte çok yer kaplayarak belleği gereksiz yere meşgul etmemektedir. Örneğin; bir projede veri tabanı bağlantı nesnesini bu yöntem ile yazabiliriz. 
 
     - "---------------------"
-  
+    - model/ içerisinde
     - Product -> IProduct interface -> Fruit, Electronic,Meat.
     - Customer -> IPersonality inteface-> Indivudial ve Corporate.
     - <img src="src/main/java/model/personality_factory/PersonalityFactory.png"   alt="personality">
@@ -94,6 +122,7 @@
     
 
 6. `Singleton ve AbstractFactory patterlerini implemente eden kodu yazın.(25 Puan)`
+    - singleton ve abstract factory paketleri içerisinde.
     - AbstractFactory - Company
     - Factory - Vestel, Beko
     - Interface - TV, Freezer
